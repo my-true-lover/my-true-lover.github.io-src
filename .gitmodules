@@ -1,0 +1,3 @@
+[submodule "output"]
+	path = output
+	url = https://my-true-lover@github.com/my-true-lover/my-true-lover.github.io.git
