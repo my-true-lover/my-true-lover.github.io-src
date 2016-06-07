@@ -1,3 +1,6 @@
 [submodule "output"]
 	path = output
 	url = https://my-true-lover@github.com/my-true-lover/my-true-lover.github.io.git
+[submodule "plugins"]
+	path = plugins
+	url = https://github.com/getpelican/pelican-plugins.git
