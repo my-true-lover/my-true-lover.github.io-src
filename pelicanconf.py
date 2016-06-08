@@ -6,6 +6,10 @@ AUTHOR = 'Kristin'
 SITENAME = "Kristin's Stuff"
 SITEURL = ''
 
+THEME = '/home/us11334/.pelican/themes/blue-penguin'
+PLUGIN_PATH = ['/home/us11334/.pelican/plugins']
+PLUGINS = ['gallery']
+
 PATH = 'content'
 
 TIMEZONE = 'EST'
