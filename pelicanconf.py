@@ -6,6 +6,7 @@ AUTHOR = 'Kristin'
 SITENAME = "Kristin's Stuff"
 SITEURL = ''
 
+GALLERY_PATH = './content/gallery'
 THEME = '/home/us11334/.pelican/themes/blue-penguin'
 PLUGIN_PATH = ['/home/us11334/.pelican/plugins']
 PLUGINS = ['gallery']
