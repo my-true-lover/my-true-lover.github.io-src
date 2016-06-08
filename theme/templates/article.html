@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+    {% if article.tags %}
+    <meta name="keywords" content="{{ article.tags|join(",") }}" />
+    {% endif %}
+    {% if article.description %}
+    <meta name="description" content="{{ article.description }}" />
+    {% endif %}
+{% endblock %}
+
+{% block title %}{{ SITENAME }} | {{ article.title }}{% endblock %}
+
+{% block content %}
+{% include "article_stub.html" %}
+{% endblock %}
+
+{% if article.photo_gallery %}
+<div class="gallery">
+    {% for name, photo, thumb, exif, caption in article.photo_gallery %}
+		<a href="{{ SITEURL }}/{{ photo }}" title="{{ name }}" exif="{{ exif }}" caption="{{ caption }}"><img src="{{ SITEURL }}/{{ thumb }}"></a>
+		{% endfor %}
+</div>
+{% endif %}

@@ -6,10 +6,14 @@ AUTHOR = 'Kristin'
 SITENAME = "Kristin's Stuff"
 SITEURL = ''
 
-GALLERY_PATH = './gallery'
 THEME = '/home/us11334/.pelican/themes/blue-penguin'
-PLUGIN_PATH = ['/home/us11334/.pelican/plugins']
-PLUGINS = ['gallery']
+PLUGIN_PATHS = ['/home/us11334/.pelican/plugins']
+PLUGINS = ['photos']
+
+PHOTO_LIBRARY = '~/repos/kblog-pelly/photos'
+PHOTO_GALLERY = (2048, 1536, 100)
+PHOTO_ARTICLE = (760, 506, 80)
+PHOTO_THUMB = (192, 144, 60)
 
 PATH = 'content'
 
