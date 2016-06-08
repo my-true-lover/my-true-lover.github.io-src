@@ -10,7 +10,7 @@ THEME = '/home/us11334/.pelican/themes/blue-penguin'
 PLUGIN_PATHS = ['/home/us11334/.pelican/plugins']
 PLUGINS = ['photos']
 
-PHOTO_LIBRARY = '~/repos/kblog-pelly/photos'
+PHOTO_LIBRARY = '~/repos/kblog_pelly/photos'
 PHOTO_GALLERY = (2048, 1536, 100)
 PHOTO_ARTICLE = (760, 506, 80)
 PHOTO_THUMB = (192, 144, 60)
