@@ -1,3 +1,6 @@
 [submodule "output"]
 	path = output
 	url = https://my-true-lover@github.com/my-true-lover/my-true-lover.github.io.git
+[submodule "theme"]
+	path = theme
+	url = https://non-jedi@github.com/non-jedi/pujangga.git
