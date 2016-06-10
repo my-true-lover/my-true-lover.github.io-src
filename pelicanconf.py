@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Kristin'
 SITENAME = "Kristin's Stuff"
 SITESUBTITLE = 'All the stuff that Kristin likes'
-SITEURL = 'https://my-true-lover.github.io'
+SITEURL = ''
 
 THEME = './theme'
 PLUGIN_PATHS = ['/home/us11334/.pelican/plugins']
@@ -23,13 +23,13 @@ TIMEZONE = 'EST'
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = 'feeds/index.xml'
+FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-FEED_ALL_RSS = 'rss/index.xml'
+FEED_ALL_RSS = None
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -45,11 +45,11 @@ DEFAULT_PAGINATION = 10
 DISPLAY_PAGES_ON_MENU = True
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 STATIC_PATHS = ['images']
 
-ARTICLE_URL = 'posts/{slug}/'
+ARTICLE_URL = 'posts/{slug}'
 ARTICLE_SAVE_AS = 'posts/{slug}/index.html'
 
 YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
