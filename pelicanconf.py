@@ -9,14 +9,23 @@ SITEURL = ''
 
 THEME = './theme'
 PLUGIN_PATHS = ['/home/us11334/.pelican/plugins']
-PLUGINS = ['photos']
+PLUGINS = ['gallery',
+           'image_process',]
 
-PHOTO_LIBRARY = '~/repos/kblog_pelly/photos'
-PHOTO_GALLERY = (2048, 1536, 100)
-PHOTO_ARTICLE = (760, 506, 80)
-PHOTO_THUMB = (192, 144, 60)
+GALLERY_PATH = './photos'
 
-PATH = 'content'
+IMAGE_PROCESS = {
+    'thumb' : {'type' : 'image',
+               'ops' : ['scale_in 200 200 True'],
+               }
+                 }
+
+#PHOTO_LIBRARY = '~/repos/kblog_pelly/photos'
+#PHOTO_GALLERY = (2048, 1536, 100)
+#PHOTO_ARTICLE = (760, 506, 80)
+#PHOTO_THUMB = (192, 144, 60)
+
+PATH = './content'
 
 TIMEZONE = 'EST'
 
@@ -47,7 +56,7 @@ DISPLAY_PAGES_ON_MENU = True
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['photos',]
 
 ARTICLE_URL = 'posts/{slug}'
 ARTICLE_SAVE_AS = 'posts/{slug}/index.html'
