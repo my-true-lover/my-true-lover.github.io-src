@@ -8,7 +8,7 @@ SITESUBTITLE = 'All the stuff that Kristin likes'
 SITEURL = ''
 
 THEME = './theme'
-PLUGIN_PATHS = ['/home/us11334/.pelican/plugins']
+PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['gallery',
            'image_process',]
 
