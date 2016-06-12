@@ -1,0 +1,2 @@
+Title: gallery
+template: gallery
