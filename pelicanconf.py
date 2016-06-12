@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Kristin'
-SITENAME = "Kristin's Stuff"
-SITESUBTITLE = 'All the stuff that Kristin likes'
+SITENAME = 'Psalm 63 Housewife'
+SITESUBTITLE = 'My lips will glorify You because Your faithful love is better than life'
 SITEURL = ''
 
 THEME = './theme'
