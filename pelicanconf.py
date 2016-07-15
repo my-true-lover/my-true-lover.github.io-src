@@ -45,7 +45,7 @@ LINKS = None
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/RistinEigh'),
-          ('Github', 'https://github.com/my-true-lover'),)
+          ('Github', 'https://github.com/psalm63housewife'),)
 
 DEFAULT_PAGINATION = 10
 DISPLAY_PAGES_ON_MENU = True
