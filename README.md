@@ -34,6 +34,8 @@ When you're ready to publish your website:
 
 4. "cd .."
 
-5. "git commit -am "add post <post title>"
+5. "git add ."
 
-6. "git push"
+6. "git commit -m "add post <post title>""
+
+7. "git push"
