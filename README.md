@@ -39,3 +39,9 @@ When you're ready to publish your website:
 6. "git commit -m "add post <post title>""
 
 7. "git push"
+
+## Making sure your mom doesn't hound you for pictures of Job
+
+1. Post the thing to facebook if it includes pictures of Job.
+
+2. Tag your mom and your grandma at least.
