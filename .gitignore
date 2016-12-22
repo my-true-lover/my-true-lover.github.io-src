@@ -2,3 +2,4 @@
 .*~
 content/photos/*
 output/*
+*__pycache__
