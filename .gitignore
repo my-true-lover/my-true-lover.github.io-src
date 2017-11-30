@@ -2,4 +2,8 @@
 .*~
 content/photos/*
 output/*
+bin/*
+include/*
+lib/*
+pip-selfcheck.json
 *__pycache__
