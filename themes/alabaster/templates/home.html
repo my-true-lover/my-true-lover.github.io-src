@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <div class="section">
+        {% for post in posts %}
+        <article>
+            <h3>{{ post.Title }}</h3>
+            {{ post.content }}
+        </article>
+        {% endfor %}
+    </div>
+{% endblock %}

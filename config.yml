@@ -1,0 +1,6 @@
+project-name: Psalm 63 Housewife
+base-path: /
+theme: alabaster
+context:
+  static:
+    site-title: Psalm 63 Housewife

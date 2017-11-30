@@ -1,0 +1,4 @@
+first_name: String
+last_name: String
+mxid: String
+bio: Content
