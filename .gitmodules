@@ -4,9 +4,3 @@
 [submodule "theme"]
 	path = theme
 	url = https://non-jedi@github.com/non-jedi/pujangga.git
-[submodule "plugins/image_process"]
-	path = plugins/image_process
-	url = https://github.com/whiskyechobravo/image_process.git
-[submodule "plugins/gallery"]
-	path = plugins/gallery
-	url = https://non-Jedi@github.com/non-Jedi/pelican-gallery.git
