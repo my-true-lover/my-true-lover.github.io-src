@@ -4,3 +4,7 @@ theme: alabaster
 context:
   static:
     site-title: Psalm 63 Housewife
+    site_description: "My soul shall be satisfied as with the richest food.
+                       My mouth shall praise you with joyful lips."
+  dynamic:
+    authors: session.query(Author).all()

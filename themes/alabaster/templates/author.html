@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+<section class="section">
+    <h2>{{ author.first_name + " " + author.last_name }}</h2>
+    <p>contact at <a href="https://matrix.to/#/{{ author.mxid }}">
+        {{ author.mxid }}
+    </a></p>
+    {{ author.bio }}
+</section>
+<section class="section">
+    <h3>Posts by {{ author.first_name }}</h3>
+    <ul>
+        {% for post in author.posts %}
+        <li><article><h5><a href="{% url "post", post %}">
+            {{ post.Title }}
+        </a></h5></article></li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

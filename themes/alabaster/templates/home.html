@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 
 {% block body %}
-    <div class="section">
+    <section class="section">
         {% for post in posts %}
         <article>
-            <h3>{{ post.Title }}</h3>
-            {{ post.content }}
+            <h2>{{ post.Title }}</h2>
+            <p><time datetime="{{ post.datetime|date("%Y/%m/%dT%H:%M%z") }}">
+                {{ post.datetime|date("%Y/%m/%d") }}
+            </time></p>
+            {{ post.content.split("</p>")[0] + "</p>" }}
+            <p><a href="{% url "post", post %}">continue ️➡️</a></p>
         </article>
         {% endfor %}
-    </div>
+    </section>
 {% endblock %}

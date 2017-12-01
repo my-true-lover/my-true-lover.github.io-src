@@ -1,0 +1,5 @@
+path:
+  template: /author/{{ author.first_name }}/
+  for-each:
+    author: session.query(Author).all()
+template: author

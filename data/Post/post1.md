@@ -1,7 +1,8 @@
 ---
 Title: The Magical Properties of Limonade and My Husbands Chest
-Author: Kristin
-Date: 2016-01-15
+Author:
+ - Kristin
+datetime: 2016-01-15
 Category: musings
 Tags:
  - pregnancy

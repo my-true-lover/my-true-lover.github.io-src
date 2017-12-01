@@ -1,7 +1,7 @@
 Title: String
 Slug: String
-Author: Author
-Date: DateTime
+Author: Author[] -> posts
+datetime: DateTime
 Category: Category -> posts
 Tags: Tag[] -> posts
 content: Content

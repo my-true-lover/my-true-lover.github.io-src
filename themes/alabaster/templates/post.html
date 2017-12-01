@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block body %}
+<section class="section">
+    <article>
+        <h2>{{ post.Title }}</h2>
+        <p>by {% for author in post.Author[:-1] %}
+            <a href="{% url "author", author %}">{{ author.first_name }}</a>,
+            {% endfor %}
+            <a href="{% url "author", post.Author[-1] %}">{{ post.Author[-1].first_name }}</a>.
+        </p>
+        <p><time datetime="{{ post.datetime|date("%Y/%m/%dT%H:%M%z") }}">
+            {{ post.datetime|date("%Y/%m/%d") }}
+        </time></p>
+        {{ post.content }}
+    </article>
+</section>
+{% endblock %}

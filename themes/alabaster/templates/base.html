@@ -13,35 +13,34 @@
     {% block additional_styles %}{% endblock %}
 </head>
 <body role="document">
-    {% if github_url %}
-        <a href="{{ github_url }}">
-            <img style="position: fixed; top: 0; right: 0; border: 0;"
-                 src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
-                 alt="Fork me on GitHub" />
-        </a>
-    {% endif %}
     <div class="document">
         <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
             <div class="sphinxsidebarwrapper">
-                <h1 class="logo"><a href="{% url "home" %}">Statik</a></h1>
+                <h1 class="logo"><a href="{% url "home" %}">{{ site_title }}</a></h1>
                 <p class="blurb">
                     {% block description %}
-                        {{ site_description }}
+                    {{ site_description }}
                     {% endblock %}
                 </p>
 
                 <p>&nbsp;</p>
 
                 {% block navigation %}
-                    <h3>Navigation</h3>
+                <h3>Navigation</h3>
+                <ul>
+                    <li class="toctree-l1" ><h4>Authors</h4></li>
                     <ul>
-                        {% for topic in topics %}
-                            <li class="toctree-l1">
-                                <a class="reference internal" href="{% url "topics", topic %}">{{ topic.link_title }}</a>
-                            </li>
-                        {% endfor %}
+                    {% for author in authors %}
+                        <li class="toctree-l2">
+                            <a class="reference internal" href="{% url "author", author %}">
+                                {{ author.first_name }}
+                            </a>
+                        </li>
+                    {% endfor %}
                     </ul>
+                </ul>
                 {% endblock %}
+                <div class="metadata">{% block metadata %}{% endblock %}</div>
             </div>
         </div>
 
@@ -58,7 +57,7 @@
 
     <div class="footer">
         {% block footer %}
-            Generated using <a href="https://getstatik.com">Statik</a>
+        Generated using <a href="https://getstatik.com">Statik</a>
         {% endblock %}
     </div>
 
