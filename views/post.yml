@@ -2,4 +2,4 @@ path:
   template: /{{ post.Slug }}/
   for-each:
     post: session.query(Post).all()
-template: post
+template: post.jinja2

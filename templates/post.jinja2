@@ -1,4 +1,6 @@
-{% extends "base.html" %}
+{% extends "base.jinja2" %}
+
+{% block pagetitle %}{{ post.Title }}{% endblock %}
 
 {% block body %}
 <section class="section">
@@ -9,10 +11,17 @@
             {% endfor %}
             <a href="{% url "author", post.Author[-1] %}">{{ post.Author[-1].first_name }}</a>.
         </p>
-        <p><time datetime="{{ post.datetime|date("%Y/%m/%dT%H:%M%z") }}">
+        <p><time datetime="{{ post.datetime|date("%Y-%m-%dT%H:%M:%S-05:00") }}">
             {{ post.datetime|date("%Y/%m/%d") }}
         </time></p>
         {{ post.content }}
     </article>
 </section>
+{% endblock %}
+
+{% block metadata %}
+  <p class="tags">Tags: 
+    {% for tag in post.Tags %}{{ tag.Name }}, {% endfor %}
+  </p>
+  <p class="category">Category: {{ post.Category.Name }} </p>
 {% endblock %}

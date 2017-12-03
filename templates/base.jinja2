@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="Description" content="{{ site_description|striptags }}" />
-    <title>{% block pagetitle %}{{ page_title }}{% endblock %}</title>
+    <title>{% block pagetitle %}{{ site_title }}{% endblock %}</title>
     {% block favicon %}<!--[if IE]><link rel="shortcut icon" href="{% asset "favicon.ico" %}" /><![endif]-->
     <link rel="icon" href="{% asset "favicon.png" %}" />{% endblock %}
     <link rel="stylesheet" type="text/css" href="{% asset "alabaster/css/alabaster.css" %}" />
     <link rel="stylesheet" type="text/css" href="{% asset "highlight/styles/default.css" %}" />
     {% block additional_styles %}{% endblock %}
 </head>
-<body role="document">
+<body>
     <div class="document">
-        <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebar">
             <div class="sphinxsidebarwrapper">
                 <h1 class="logo"><a href="{% url "home" %}">{{ site_title }}</a></h1>
                 <p class="blurb">
@@ -25,21 +25,22 @@
 
                 <p>&nbsp;</p>
 
-                {% block navigation %}
+                <nav>{% block navigation %}
                 <h3>Navigation</h3>
                 <ul>
-                    <li class="toctree-l1" ><h4>Authors</h4></li>
-                    <ul>
-                    {% for author in authors %}
-                        <li class="toctree-l2">
-                            <a class="reference internal" href="{% url "author", author %}">
-                                {{ author.first_name }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                    </ul>
+                    <li class="toctree-l1" ><h4>Authors</h4>
+                        <ul>
+                        {% for author in authors %}
+                            <li class="toctree-l2">
+                                <a class="reference internal" href="{% url "author", author %}">
+                                    {{ author.first_name }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </li>
                 </ul>
-                {% endblock %}
+                {% endblock %}</nav>
                 <div class="metadata">{% block metadata %}{% endblock %}</div>
             </div>
         </div>
@@ -61,9 +62,9 @@
         {% endblock %}
     </div>
 
-    <script type="text/javascript" src="{% asset "jquery/dist/jquery.min.js" %}"></script>
-    <script type="text/javascript" src="{% asset "highlight/highlight.pack.js" %}"></script>
-    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+    <script src="{% asset "jquery/dist/jquery.min.js" %}"></script>
+    <script src="{% asset "highlight/highlight.pack.js" %}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     {% block additional_scripts %}{% endblock %}
 </body>
 </html>
