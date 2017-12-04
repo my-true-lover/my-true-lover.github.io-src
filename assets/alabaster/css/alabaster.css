@@ -46,7 +46,7 @@ div.body > .section {
     text-align: left;
 }
 
-div.footer {
+footer {
     width: 940px;
     margin: 20px auto 30px auto;
     font-size: 14px;
@@ -54,7 +54,12 @@ div.footer {
     text-align: right;
 }
 
-div.footer a {
+article footer {
+    text-align: left;
+    width: 100%;
+}
+
+footer a {
     color: #888;
 }
 
@@ -519,7 +524,7 @@ a:hover tt, a:hover code {
         width: auto;
     }
 
-    .footer {
+    footer {
         width: auto;
     }
 
@@ -527,7 +532,7 @@ a:hover tt, a:hover code {
         margin: 0;
     }
 
-    .footer {
+    footer {
         width: auto;
     }
 
@@ -581,7 +586,7 @@ a:hover tt, a:hover code {
         margin: 0;
     }
 
-    div.footer {
+    footer {
         display: none;
     }
 
@@ -602,11 +607,11 @@ a:hover tt, a:hover code {
         width: auto;
     }
 
-    .footer {
+    footer {
         width: auto;
     }
 
-    .footer {
+    footer {
         width: auto;
     }
 
@@ -632,7 +637,7 @@ a:hover tt, a:hover code {
  * pages. Without this, docutils' magical list fuckery causes inconsistent
  * formatting between different release sub-lists.
  */
-div#changelog > div.section > ul > li > p:only-child {
+div#changelog > section.section > ul > li > p:only-child {
     margin-bottom: 0;
 }
 

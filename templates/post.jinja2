@@ -6,22 +6,30 @@
 <section class="section">
     <article>
         <h2>{{ post.Title }}</h2>
+
         <p>by {% for author in post.Author[:-1] %}
             <a href="{% url "author", author %}">{{ author.first_name }}</a>,
             {% endfor %}
             <a href="{% url "author", post.Author[-1] %}">{{ post.Author[-1].first_name }}</a>.
         </p>
+
         <p><time datetime="{{ post.datetime|date("%Y-%m-%dT%H:%M:%S-05:00") }}">
             {{ post.datetime|date("%Y/%m/%d") }}
         </time></p>
+
         {{ post.content }}
+
+        <footer>
+          <p>
+            Tags: {% for tag in post.Tags[:-1] %}
+              <a href="{% url "tags", tag %}">{{ tag.Name }}</a>, 
+            {% endfor %}
+            <a href="{% url "tags", post.Tags[-1] %}">{{ post.Tags[-1].Name }}</a>
+          </p>
+          <p>Category: <a href="{% url "categories", post.Category %}">
+              {{ post.Category.Name }}
+          </a></p>
+        </footer>
     </article>
 </section>
-{% endblock %}
-
-{% block metadata %}
-  <p class="tags">Tags: 
-    {% for tag in post.Tags %}{{ tag.Name }}, {% endfor %}
-  </p>
-  <p class="category">Category: {{ post.Category.Name }} </p>
 {% endblock %}

@@ -1,0 +1,9 @@
+path:
+  template: /tag/{{ post_container.Name }}/
+  for-each:
+    post_container: session.query(Tag).all()
+template: feed.jinja2
+context:
+  static:
+    is_post_container: True
+    content_type: Tag

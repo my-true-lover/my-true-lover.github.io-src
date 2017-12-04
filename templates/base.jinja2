@@ -28,6 +28,28 @@
                 <nav>{% block navigation %}
                 <h3>Navigation</h3>
                 <ul>
+                    <li class="toctree-l1" ><h4>Categories</h4>
+                        <ul>
+                        {% for category in categories %}
+                            <li class="toctree-l2">
+                                <a class="reference internal" href="{% url "categories", category %}">
+                                    {{ category.Name }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="toctree-l1" ><h4>Tags</h4>
+                        <ul>
+                        {% for tag in tags %}
+                            <li class="toctree-l2">
+                                <a class="reference internal" href="{% url "tags", tag %}">
+                                    {{ tag.Name }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </li>
                     <li class="toctree-l1" ><h4>Authors</h4>
                         <ul>
                         {% for author in authors %}
@@ -41,13 +63,12 @@
                     </li>
                 </ul>
                 {% endblock %}</nav>
-                <div class="metadata">{% block metadata %}{% endblock %}</div>
             </div>
         </div>
 
         <div class="documentwrapper">
             <div class="bodywrapper">
-                <div class="body" role="main">
+                <div class="body">
                     {% block body %}{% endblock %}
                 </div>
             </div>
@@ -56,15 +77,18 @@
         <div class="clearer"></div>
     </div>
 
-    <div class="footer">
+    <footer>
         {% block footer %}
-        Generated using <a href="https://getstatik.com">Statik</a>
-        {% endblock %}
-    </div>
+          <p>All content (unless stated otherwise) is licensed under the
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+            CC-BY-NC-SA 4.0 International License
+          </a>.
+      {% endblock %}
+  </footer>
 
-    <script src="{% asset "jquery/dist/jquery.min.js" %}"></script>
-    <script src="{% asset "highlight/highlight.pack.js" %}"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    {% block additional_scripts %}{% endblock %}
+  <script src="{% asset "jquery/dist/jquery.min.js" %}"></script>
+  <script src="{% asset "highlight/highlight.pack.js" %}"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  {% block additional_scripts %}{% endblock %}
 </body>
 </html>

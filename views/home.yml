@@ -1,5 +1,5 @@
 path: /
-template: home.jinja2
+template: feed.jinja2
 context:
   dynamic:
     posts: session.query(Post).all()

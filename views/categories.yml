@@ -1,0 +1,9 @@
+path:
+  template: /category/{{ post_container.Name }}/
+  for-each:
+    post_container: session.query(Category).all()
+template: feed.jinja2
+context:
+  static:
+    is_post_container: True
+    content_type: Category

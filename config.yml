@@ -3,7 +3,9 @@ base-path: /
 context:
   static:
     site-title: Psalm 63 Housewife
-    site_description: "My soul shall be satisfied as with the richest food.
-                       My mouth shall praise you with joyful lips."
+    site_description: "My lips will glorify you because your faithful love is
+                       better than life."
   dynamic:
     authors: session.query(Author).all()
+    tags: session.query(Tag).all()
+    categories: session.query(Category).all()

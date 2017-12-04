@@ -2,9 +2,14 @@
 
 {% block body %}
     <section>
+        {% if is_post_container %}
+          {% set posts = post_container.posts %}
+          <h2>{{ content_type }}: {{ post_container.Name }}</h2>
+        {% endif %}
+
         {% for post in posts %}
         <article>
-            <h2>{{ post.Title }}</h2>
+            <h3>{{ post.Title }}</h3>
             <p><time datetime="{{ post.datetime|date("%Y-%m-%dT%H:%M:%S-05:00") }}">
                 {{ post.datetime|date("%Y/%m/%d") }}
             </time></p>
