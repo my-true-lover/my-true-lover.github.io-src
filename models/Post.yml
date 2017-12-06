@@ -1,7 +1,8 @@
-Title: String
-Slug: String
-Author: Author[] -> posts
+title: String
+slug: String
+authors: Author[] -> posts
+album: Album
 datetime: DateTime
-Category: Category -> posts
-Tags: Tag[] -> posts
+category: Category -> posts
+tags: Tag[] -> posts
 content: Content

@@ -13,7 +13,7 @@
     <ul>
         {% for post in author.posts %}
         <li><article><h5><a href="{% url "post", post %}">
-            {{ post.Title }}
+            {{ post.title }}
         </a></h5></article></li>
         {% endfor %}
     </ul>

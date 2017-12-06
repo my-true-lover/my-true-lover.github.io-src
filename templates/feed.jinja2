@@ -9,7 +9,7 @@
 
         {% for post in posts %}
         <article>
-            <h3>{{ post.Title }}</h3>
+            <h3>{{ post.title }}</h3>
             <p><time datetime="{{ post.datetime|date("%Y-%m-%dT%H:%M:%S-05:00") }}">
                 {{ post.datetime|date("%Y/%m/%d") }}
             </time></p>

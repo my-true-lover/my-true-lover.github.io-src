@@ -1,10 +1,15 @@
-Title: Elections and Repetitive History 
-Authors: Kristin
-Date: 2016-08-15
-Category: musings
-Tags: politics, history
-Slug: helen-keller
-Gallery: Elections and Repetitive History
+---
+title: Elections and Repetitive History 
+authors:
+  - Kristin
+datetime: 2016-08-15
+category: musings
+tags: 
+  - politics
+  - history
+slug: helen-keller
+album: post3
+---
 
 Sometimes it's weird to be a stay at home mom. In college, it was my job to
 think about problems and brainstorm solutions. Now it's my job to love, protect,

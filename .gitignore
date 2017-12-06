@@ -1,8 +1,8 @@
 *~
 .*~
 public/*
-content/photos/*
-output/*
+assets/photos/*
+assets/thumbnails/*
 bin/*
 include/*
 lib/*

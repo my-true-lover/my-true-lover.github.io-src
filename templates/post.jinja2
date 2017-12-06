@@ -1,16 +1,16 @@
 {% extends "base.jinja2" %}
 
-{% block pagetitle %}{{ post.Title }}{% endblock %}
+{% block pagetitle %}{{ post.title }}{% endblock %}
 
 {% block body %}
 <section class="section">
     <article>
-        <h2>{{ post.Title }}</h2>
+        <h2>{{ post.title }}</h2>
 
-        <p>by {% for author in post.Author[:-1] %}
+        <p>by {% for author in post.authors[:-1] %}
             <a href="{% url "author", author %}">{{ author.first_name }}</a>,
             {% endfor %}
-            <a href="{% url "author", post.Author[-1] %}">{{ post.Author[-1].first_name }}</a>.
+            <a href="{% url "author", post.authors[-1] %}">{{ post.authors[-1].first_name }}</a>.
         </p>
 
         <p><time datetime="{{ post.datetime|date("%Y-%m-%dT%H:%M:%S-05:00") }}">
@@ -19,15 +19,25 @@
 
         {{ post.content }}
 
-        <footer>
+        {% if post.album %}
+          <p class="album">
+            {% for image in post.album.images %}
+            <a href="/assets/photos/{{ post.album.folder }}/{{ image.pk }}">
+                <img src="/assets/photos/{{ post.album.folder }}/thumb_{{ image.pk }}"></img>
+            </a>
+            {% endfor %}
+          </p>
+        {% endif %}
+        <div class="clearer"></div>
+        <footer class="post-info">
           <p>
-            Tags: {% for tag in post.Tags[:-1] %}
+            Tags: {% for tag in post.tags[:-1] %}
               <a href="{% url "tags", tag %}">{{ tag.Name }}</a>, 
             {% endfor %}
-            <a href="{% url "tags", post.Tags[-1] %}">{{ post.Tags[-1].Name }}</a>
+            <a href="{% url "tags", post.tags[-1] %}">{{ post.tags[-1].Name }}</a>
           </p>
-          <p>Category: <a href="{% url "categories", post.Category %}">
-              {{ post.Category.Name }}
+          <p>Category: <a href="{% url "categories", post.category %}">
+              {{ post.category.Name }}
           </a></p>
         </footer>
     </article>

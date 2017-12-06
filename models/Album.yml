@@ -1,2 +1,2 @@
-Title: String
-images: String[]
+images: Image[]
+folder: String

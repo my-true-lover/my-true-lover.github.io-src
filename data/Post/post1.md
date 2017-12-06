@@ -1,14 +1,14 @@
 ---
-Title: The Magical Properties of Limonade and My Husbands Chest
-Author:
+title: The Magical Properties of Limonade and My Husbands Chest
+authors:
  - Kristin
 datetime: 2016-01-15
-Category: musings
-Tags:
+category: musings
+tags:
  - pregnancy
  - awesome husband
  - psalms
-Slug: magical-properties-limonade
+slug: magical-properties-limonade
 ---
 
 Today was one of *those* days. My dog pooped all over the nursery, my computer
