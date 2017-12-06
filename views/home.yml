@@ -2,4 +2,4 @@ path: /
 template: feed.jinja2
 context:
   dynamic:
-    posts: session.query(Post).all()
+    posts: session.query(Post).order_by(Post.datetime.desc()).all()

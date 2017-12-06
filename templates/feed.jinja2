@@ -7,7 +7,7 @@
           <h2>{{ content_type }}: {{ post_container.Name }}</h2>
         {% endif %}
 
-        {% for post in posts %}
+        {% for post in posts|sort(attribute='datetime', reverse=True) %}
         <article>
             <h3>{{ post.title }}</h3>
             <p><time datetime="{{ post.datetime|date("%Y-%m-%dT%H:%M:%S-05:00") }}">
