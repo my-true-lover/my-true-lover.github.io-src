@@ -13,7 +13,9 @@
             <p><time datetime="{{ post.datetime|date("%Y-%m-%dT%H:%M:%S-05:00") }}">
                 {{ post.datetime|date("%Y/%m/%d") }}
             </time></p>
-            {{ post.content.split("</p>")[0] + "</p>" }}
+            {% if post.content %}
+              {{ post.content.split("</p>")[0] + "</p>" }}
+            {% endif %}
             <p><a href="{% url "post", post %}">continue ️➡️</a></p>
         </article>
         {% endfor %}

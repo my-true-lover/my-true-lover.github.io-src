@@ -1,0 +1,18 @@
+{% extends "base.jinja2" %}
+
+{% block pagetitle %}All Photos{% endblock %}
+
+{% block body %}
+<section class="section">
+  {% for album in albums %}
+  <article class="album">
+    {% for image in album.images %}
+    <a href="/assets/photos/{{ album.folder }}/{{ image.pk }}">
+      <img src="/assets/photos/{{ album.folder }}/thumb_{{ image.pk }}"></img>
+    </a>
+    {% endfor %}
+  </article>
+  <div class="clearer"></div>
+  {% endfor %}
+</section>
+{% endblock %}

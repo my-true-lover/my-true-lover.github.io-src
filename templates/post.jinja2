@@ -17,7 +17,9 @@
             {{ post.datetime|date("%Y/%m/%d") }}
         </time></p>
 
-        {{ post.content }}
+        {% if post.content %}
+          {{ post.content }}
+        {% endif %}
 
         {% if post.album %}
           <p class="album">

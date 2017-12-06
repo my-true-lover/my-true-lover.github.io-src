@@ -1,0 +1,5 @@
+path: /photos
+template: photos.jinja2
+context:
+  dynamic:
+    albums: session.query(Album).all()
