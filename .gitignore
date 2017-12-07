@@ -1,6 +1,7 @@
 *~
 .*~
 public/*
+content/*
 assets/photos/*
 assets/thumbnails/*
 bin/*

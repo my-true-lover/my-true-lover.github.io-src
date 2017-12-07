@@ -1,9 +1,14 @@
-Title: Children's Books Like Vegetables
-Authors: Kristin
-Date: 2016-09-15
-Category: childrens book reviews
-Tags: good books, depth, plourde
-Slug: maxis-secrets
+---
+title: Children's Books Like Vegetables
+authors:
+  - Kristin
+datetime: 2016-09-15
+category: childrens book reviews
+tags:
+  - good books
+  - depth
+slug: maxis-secrets
+---
 
 I recently read Maxi's Secrets by Lynn Plourde. Now, some of you are
 thinking: but where are the pictures of your baby? And some of you are

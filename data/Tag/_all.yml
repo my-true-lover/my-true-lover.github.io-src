@@ -12,3 +12,7 @@
   Name: My men
 - pk: pictures
   Name: Pictures
+- pk: good books
+  Name: Good Books
+- pk: depth
+  Name: Depth
